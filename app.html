@@ -21,7 +21,7 @@ img{display:block;max-width:100%}
 
 .desk{min-height:100svh;display:grid;place-items:center;background:radial-gradient(50vw 50vw at 15% 15%,#F36B1255,transparent 60%),radial-gradient(45vw 45vw at 90% 85%,#0A55B5,transparent 60%),#083f88;padding:24px}
 .side{display:none;color:#fff}
-.phone{position:relative;width:100%;max-width:430px;height:100svh;overflow:hidden;background:var(--fondo)}
+.phone{position:relative;width:100%;max-width:430px;height:100svh;overflow:clip;background:var(--fondo)}
 @media (max-width:819px){.desk{padding:0}}
 @media (min-width:820px){
  .desk{grid-template-columns:auto 410px;gap:64px;justify-content:center}
@@ -82,10 +82,12 @@ img{display:block;max-width:100%}
 .sh{display:flex;justify-content:space-between;align-items:baseline;margin:14px 0 8px}
 .sh h4{font-family:var(--cond);font-weight:800;font-style:italic;font-size:22px;text-transform:uppercase;color:var(--azul)}
 .sh span{font-size:12.5px;color:var(--verde);font-weight:600}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .pc{background:#fff;border-radius:16px;padding:10px;display:flex;flex-direction:column;gap:4px;min-width:0;box-shadow:0 1px 0 var(--linea)}
 .pc .em{height:62px;border-radius:12px;background:var(--fondo);display:grid;place-items:center;font-size:30px;position:relative}
-.pc .em .off{position:absolute;top:6px;left:6px;background:var(--verde);color:#fff;font-size:10.5px;font-weight:700;padding:1px 6px;border-radius:999px}
+.pc .em.ph{height:118px;background:#fff}
+.pc .em img{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);object-fit:contain}
+.pc .em .off{z-index:1;position:absolute;top:6px;left:6px;background:var(--verde);color:#fff;font-size:10.5px;font-weight:700;padding:1px 6px;border-radius:999px}
 .pc b{font-size:13.5px;line-height:1.2;min-height:32px}
 .pc small{font-size:11.5px;color:var(--gris)}
 .pc .pr{font-weight:800;font-size:17px;font-variant-numeric:tabular-nums}
@@ -145,6 +147,7 @@ img{display:block;max-width:100%}
 .info i{font-style:normal;width:36px;height:36px;border-radius:10px;background:#fff1e6;display:grid;place-items:center;flex:none;font-size:18px}
 .prov{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .prov span{background:#e9f0fb;color:var(--azul);font-weight:700;font-size:12.5px;padding:5px 10px;border-radius:999px}
+.redes{display:flex;gap:10px;margin-top:10px}.redes a{width:44px;height:44px;border-radius:12px;display:grid;place-items:center}.redes svg{width:22px;height:22px}
 .foto{border-radius:18px;overflow:hidden;height:180px;margin-top:12px}
 .foto img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
 .toast{position:absolute;left:50%;bottom:96px;transform:translate(-50%,8px);background:var(--tinta);color:#fff;padding:9px 14px;border-radius:10px;font-weight:600;font-size:13.5px;opacity:0;transition:.25s;z-index:9;pointer-events:none;white-space:nowrap}
@@ -207,12 +210,13 @@ img{display:block;max-width:100%}
       <div class="tt">El local</div>
       <div class="foto"><img src="img/frente.jpg" alt="Frente del local de Pronto Ahorro"></div>
       <div class="box info">
-        <div><i>📍</i><span>Ruta Provincial 21, km 5,8, colectora<br>Cochabamba 2709, Alvear, Santa Fe</span></div>
+        <div><i>📍</i><span>Ruta Provincial 21, km 5,8, colectora (Cochabamba 2709), Alvear, Santa Fe<br><small style="color:var(--gris)">A dos cuadras del acceso principal a Alvear</small></span></div>
         <div><i>🕗</i><span>Lunes a viernes de 8 a 16 hs<br>Sábados de 8 a 13 hs</span></div>
         <div><i>💳</i><span>Efectivo o transferencia</span></div>
         <div><i>💬</i><span>Pedidos: <a class="lnk" href="https://wa.me/5493416114778" target="_blank" rel="noopener">341 611-4778</a></span></div>
       </div>
       <div class="box"><b>Repartimos a más de 800 localidades</b><div class="prov"><span>Santa Fe</span><span>Entre Ríos</span><span>Buenos Aires</span><span>Córdoba</span></div></div>
+      <div class="box"><b>Seguinos</b><div class="redes"><a href="https://www.instagram.com/prontoahorro/" target="_blank" rel="noopener" aria-label="Instagram" style="background:#d6249f"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></a><a href="https://www.facebook.com/prontoahorro/" target="_blank" rel="noopener" aria-label="Facebook" style="background:#1877f2"><svg viewBox="0 0 24 24" fill="#fff"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v9h4v-9h3l.5-4h-3.5V8.8c0-.5.3-.8.8-.8z"/></svg></a><a href="https://www.tiktok.com/@prontoahorro" target="_blank" rel="noopener" aria-label="TikTok" style="background:#111"><svg viewBox="0 0 24 24" fill="#fff"><path d="M16.6 2h-3.4v13.3a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.4 6.4 0 1 0 5.4 6.3V8.6a8 8 0 0 0 4.4 1.3V6.5a4.5 4.5 0 0 1-4.4-4.5z"/></svg></a></div></div>
       <a class="wbtn" href="https://maps.google.com/?q=Pronto+Ahorro+Mayorista+Alvear+Santa+Fe" target="_blank" rel="noopener" style="background:var(--azul);color:#fff">Cómo llegar</a>
     </div></section>
 
@@ -233,14 +237,15 @@ var WA='5493416114778';
 var CATS=[['todo','Todo','🛒'],['almacen','Almacén','🥫'],['bebidas','Bebidas','🥤'],['limpieza','Limpieza','🧴'],['perfumeria','Perfumería','🧼'],['golosinas','Golosinas','🍫'],['desayuno','Desayuno','☕']];
 var ICO={almacen:'🥫',bebidas:'🥤',limpieza:'🧴',perfumeria:'🧼',golosinas:'🍫',desayuno:'☕'};
 var P=[
- ['yer','desayuno','Yerba mate con palo','1 kg',4250,10,8],['yer5','desayuno','Yerba mate suave','500 g',2290,20,8],['caf','desayuno','Café molido','250 g',3890,12,6],['te','desayuno','Té en saquitos','x 50',1290,24,8],['azu','desayuno','Azúcar','1 kg',1190,10,7],['dul','desayuno','Dulce de leche clásico','400 g',2150,12,7],['gal','desayuno','Galletitas de agua','3 x 100 g',1490,20,8],
- ['ace','almacen','Aceite de girasol','1,5 L',3290,12,7],['fid','almacen','Fideos secos tirabuzón','500 g',990,20,9],['arr','almacen','Arroz largo fino','1 kg',1590,10,8],['har','almacen','Harina 000','1 kg',890,10,8],['pur','almacen','Puré de tomate','520 g',790,24,9],['atu','almacen','Atún al natural','170 g',2390,24,7],['arv','almacen','Arvejas en lata','300 g',690,24,9],['may','almacen','Mayonesa','475 g',1990,12,7],['sal','almacen','Sal fina','500 g',590,20,8],['lev','almacen','Polenta instantánea','500 g',890,20,8],
- ['gas','bebidas','Gaseosa cola','2,25 L',2490,8,8],['gasl','bebidas','Gaseosa lima limón','2,25 L',2190,8,8],['agu','bebidas','Agua mineral sin gas','2 L',990,6,10],['jug','bebidas','Jugo en polvo surtido','x 18 g',290,18,10],['cer','bebidas','Cerveza rubia lata','473 ml',1590,24,8],['vin','bebidas','Vino tinto Malbec','750 ml',3490,6,7],['fer','bebidas','Aperitivo amargo','750 ml',8990,6,6],['sod','bebidas','Soda en sifón','2 L',890,6,10],
- ['lav','limpieza','Lavandina','1 L',790,15,10],['det','limpieza','Detergente','750 ml',1590,12,8],['jab','limpieza','Jabón en polvo','800 g',3290,12,7],['sua','limpieza','Suavizante','900 ml',1990,12,8],['des','limpieza','Desodorante de pisos','900 ml',1290,12,8],['esp','limpieza','Esponjas multiuso','x 3',990,24,9],['bol','limpieza','Bolsas de residuo 50x70','x 10',890,25,10],['rol','limpieza','Rollo de cocina','x 3',2290,10,8],
- ['pap','perfumeria','Papel higiénico 30 m','x 4',1890,12,8],['sha','perfumeria','Shampoo','400 ml',2890,12,7],['jabt','perfumeria','Jabón de tocador','x 3',1990,24,8],['pas','perfumeria','Pasta dental','90 g',1490,24,8],['deo','perfumeria','Desodorante aerosol','150 ml',2690,12,7],['pan','perfumeria','Pañales talle G','x 30',13900,4,6],
- ['alf','golosinas','Alfajor triple chocolate','caja x 6',3690,12,8],['car','golosinas','Caramelos masticables','bolsa 1 kg',4990,10,7],['pap2','golosinas','Papas fritas clásicas','150 g',2190,12,8],['chi','golosinas','Chicles surtidos','caja x 20',2390,12,8],['cho','golosinas','Chocolate con leche','100 g',2290,20,7]
+ ['yer','desayuno','Yerba Playadito suave con palo','1 kg',4250,10,8],['yer5','desayuno','Yerba mate suave','500 g',2290,20,8],['caf','desayuno','Café molido','250 g',3890,12,6],['te','desayuno','Té en saquitos','x 50',1290,24,8],['azu','desayuno','Azúcar','1 kg',1190,10,7],['dul','desayuno','Dulce de leche clásico','400 g',2150,12,7],['gal','desayuno','Galletitas de agua','3 x 100 g',1490,20,8],
+ ['ace','almacen','Aceite de girasol Natura','1,5 L',3290,12,7],['fid','almacen','Fideos tirabuzón Lucchetti','500 g',990,20,9],['arr','almacen','Arroz largo fino Gallo','1 kg',1590,10,8],['har','almacen','Harina 000','1 kg',890,10,8],['pur','almacen','Puré de tomate','520 g',790,24,9],['atu','almacen','Atún al natural','170 g',2390,24,7],['arv','almacen','Arvejas en lata','300 g',690,24,9],['may','almacen','Mayonesa Hellmann’s clásica','475 g',2390,12,7],['sal','almacen','Sal fina','500 g',590,20,8],['lev','almacen','Polenta instantánea','500 g',890,20,8],
+ ['gas','bebidas','Coca-Cola sabor original','2,25 L',3290,8,8],['gasl','bebidas','Gaseosa lima limón','2,25 L',2190,8,8],['agu','bebidas','Agua mineral sin gas','2 L',990,6,10],['jug','bebidas','Jugo en polvo surtido','x 18 g',290,18,10],['cer','bebidas','Cerveza Quilmes Clásica lata','473 ml',1590,24,8],['vin','bebidas','Vino tinto Malbec','750 ml',3490,6,7],['fer','bebidas','Aperitivo amargo','750 ml',8990,6,6],['sod','bebidas','Soda en sifón','2 L',890,6,10],
+ ['lav','limpieza','Lavandina Ayudín original','1 L',990,15,10],['det','limpieza','Detergente','750 ml',1590,12,8],['jab','limpieza','Jabón en polvo Ala Matic','800 g',3290,12,7],['sua','limpieza','Suavizante','900 ml',1990,12,8],['des','limpieza','Desodorante de pisos','900 ml',1290,12,8],['esp','limpieza','Esponjas multiuso','x 3',990,24,9],['bol','limpieza','Bolsas de residuo 50x70','x 10',890,25,10],['rol','limpieza','Rollo de cocina','x 3',2290,10,8],
+ ['pap','perfumeria','Papel higiénico Higienol Max','4 x 80 m',4590,12,8],['sha','perfumeria','Shampoo','400 ml',2890,12,7],['jabt','perfumeria','Jabón de tocador','x 3',1990,24,8],['pas','perfumeria','Pasta dental','90 g',1490,24,8],['deo','perfumeria','Desodorante aerosol','150 ml',2690,12,7],['pan','perfumeria','Pañales talle G','x 30',13900,4,6],
+ ['alf','golosinas','Alfajor Fantoche triple chocolate','85 g',1190,24,8],['car','golosinas','Caramelos masticables','bolsa 1 kg',4990,10,7],['pap2','golosinas','Papas fritas clásicas','150 g',2190,12,8],['chi','golosinas','Chicles surtidos','caja x 20',2390,12,8],['cho','golosinas','Chocolate con leche','100 g',2290,20,7]
 ];
-P=P.map(function(a){return{id:a[0],c:a[1],n:a[2],pr:a[3],u:a[4],x:a[5],d:a[6],b:Math.round(a[4]*a[5]*(1-a[6]/100)/10)*10}});
+var FOTO=['yer','ace','fid','gas','cer','lav','pap','alf','may','arr','jab'];
+P=P.map(function(a){return{f:FOTO.indexOf(a[0])>-1?'img/p/'+a[0]+'.jpg':'',id:a[0],c:a[1],n:a[2],pr:a[3],u:a[4],x:a[5],d:a[6],b:Math.round(a[4]*a[5]*(1-a[6]/100)/10)*10}});
 var $=function(s){return document.querySelector(s)},money=function(n){return '$'+Math.round(n).toLocaleString('es-AR')},esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
 var mem={};function st(k,v){try{if(v===undefined){var x=localStorage.getItem(k);return x?JSON.parse(x):mem[k]}localStorage.setItem(k,JSON.stringify(v))}catch(e){if(v===undefined)return mem[k];mem[k]=v}}
 var d=new Date();$('#upd').textContent='Lista al '+d.getDate()+'/'+(d.getMonth()+1);
@@ -254,9 +259,9 @@ document.addEventListener('click',function(e){var g=e.target.closest('[data-go]'
 
 function cats(){$('#cats').innerHTML=CATS.map(function(c){return '<button aria-pressed="'+(c[0]===cat)+'" data-c="'+c[0]+'"><i>'+c[2]+'</i>'+c[1]+'</button>'}).join('')}
 function card(p){var k=p.id+'|'+modo,n=cart[k]||0,b=modo==='b';
- return '<div class="pc"><div class="em">'+(b?'<span class="off">'+p.d+'% menos</span>':'')+ICO[p.c]+'</div><b>'+esc(p.n)+'</b><small>'+esc(p.pr)+(b?' · bulto x '+p.x:'')+'</small><div class="ft"><span class="pr'+(b?' bu':'')+'">'+money(b?p.b:p.u)+'</span>'+
+ return '<div class="pc"><div class="em'+(p.f?' ph':'')+'">'+(b?'<span class="off">'+p.d+'% menos</span>':'')+(p.f?'<img src="'+p.f+'" alt="">':ICO[p.c])+'</div><b>'+esc(p.n)+'</b><small>'+esc(p.pr)+(b?' · bulto x '+p.x:'')+'</small><div class="ft"><span class="pr'+(b?' bu':'')+'">'+money(b?p.b:p.u)+'</span>'+
  (n?'<div class="qty"><button data-q="'+p.id+'" data-d="-1" aria-label="Quitar">−</button><span>'+n+'</span><button data-q="'+p.id+'" data-d="1" aria-label="Sumar">+</button></div>':'<button class="add" data-q="'+p.id+'" data-d="1" aria-label="Sumar '+esc(p.n)+'">+</button>')+'</div></div>'}
-function grid(){var t=q.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');var L=P.filter(function(p){return(cat==='todo'||p.c===cat)&&(!t||p.n.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').indexOf(t)>-1)});
+function grid(){var t=q.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');var L=P.slice().sort(function(a,b){return (b.f?1:0)-(a.f?1:0)}).filter(function(p){return(cat==='todo'||p.c===cat)&&(!t||p.n.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').indexOf(t)>-1)});
  $('#ttl').textContent=cat==='todo'?'Todos los productos':CATS.find(function(c){return c[0]===cat})[1];
  $('#grid').innerHTML=L.map(card).join('')||'<p style="grid-column:1/-1;color:var(--gris);text-align:center;padding:20px">No lo encontramos. Consultanos por WhatsApp.</p>'}
 cats();grid();
