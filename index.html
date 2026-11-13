@@ -166,7 +166,8 @@ footer a{color:#fff;text-decoration:none;font-weight:600}
 .x{width:36px;height:36px;border-radius:50%;font-size:24px;display:grid;place-items:center}
 .x:hover{background:var(--fondo)}
 .pb{flex:1;overflow-y:auto;padding:12px 18px;display:grid;gap:10px;align-content:start}
-.it{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;padding-bottom:10px;border-bottom:1px solid var(--linea)}
+.it{display:grid;grid-template-columns:52px minmax(0,1fr) auto;align-items:center;gap:4px 10px;padding-bottom:10px;border-bottom:1px solid var(--linea)}
+.it .th{width:52px;height:52px;object-fit:contain;border:1px solid var(--linea);border-radius:10px;background:#fff}
 .it b{font-size:14.5px}
 .it small{color:var(--gris);font-size:12.5px}
 .it .r{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
@@ -432,7 +433,7 @@ var ov=$('#ov'),panel=$('#panel'),ok=$('#ok');
 function cerrar(){panel.classList.remove('on');ok.classList.remove('on');ov.classList.remove('on')}
 ov.onclick=cerrar;document.addEventListener('click',function(e){if(e.target.closest('[data-close]'))cerrar()});document.addEventListener('keydown',function(e){if(e.key==='Escape')cerrar()});
 function render(){var L=lineas(),tot=0,ah=0;
- $('#pb').innerHTML=L.map(function(l){tot+=l.sub;ah+=l.ah;return '<div class="it"><div><b>'+esc(l.p.n)+'</b><br><small>'+esc(l.p.pr)+' · '+(l.b?l.n+' bulto'+(l.n>1?'s':'')+' x '+l.p.x:l.n+' unidad'+(l.n>1?'es':''))+'</small></div><div class="r">'+money(l.sub)+'</div></div>'}).join('')+
+ $('#pb').innerHTML=L.map(function(l){tot+=l.sub;ah+=l.ah;return '<div class="it"><img class="th" src="'+l.p.f+'" alt=""><div><b>'+esc(l.p.n)+'</b><br><small>'+esc(l.p.pr)+' · '+(l.b?l.n+' bulto'+(l.n>1?'s':'')+' x '+l.p.x:l.n+' unidad'+(l.n>1?'es':''))+'</small></div><div class="r">'+money(l.sub)+'</div></div>'}).join('')+
  (ah?'<div class="ahorro">Comprando por bulto ahorrás '+money(ah)+'</div>':'')+'<div class="tot"><span>Total estimado</span><span>'+money(tot)+'</span></div>'}
 $('#open').onclick=function(){render();panel.classList.add('on');ov.classList.add('on')};
 $('#pf').addEventListener('submit',function(e){e.preventDefault();var f=new FormData(e.target),L=lineas(),tot=0,n=(st('pa-n')||100)+1;st('pa-n',n);var id='PA-'+n;
