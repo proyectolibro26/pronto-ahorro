@@ -67,7 +67,7 @@ nav.m a:hover{color:var(--nar)}
 .btn.wa{background:var(--wa);color:#063b1c}
 .foto{border-radius:14px;overflow:hidden;border:5px solid #fff;box-shadow:0 20px 40px rgba(8,63,136,.3);transform:rotate(2deg);aspect-ratio:3/4;max-height:420px;justify-self:end}
 .foto img{width:100%;height:100%;object-fit:cover}
-@media (max-width:820px){.hero .wrap{grid-template-columns:minmax(0,1fr);padding-top:26px;padding-bottom:40px}.hero h1{font-size:min(13vw,60px)}.hero p{font-size:15px}.foto{display:none}}
+@media (max-width:820px){.hero .wrap{grid-template-columns:minmax(0,1fr);padding-top:26px;padding-bottom:40px}.hero h1{font-size:min(9.6vw,60px)}.hero p{font-size:15px}.foto{display:none}}
 
 /* beneficios */
 .bens{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:-22px;position:relative;z-index:2}
@@ -78,7 +78,7 @@ nav.m a:hover{color:var(--nar)}
 @media (max-width:820px){.bens{display:flex;overflow-x:auto;scrollbar-width:none;margin:-18px -16px 0;padding:0 16px 6px}.bens::-webkit-scrollbar{display:none}.ben{flex:0 0 210px}}
 
 /* lista */
-section.s{padding:38px 0 10px;scroll-margin-top:70px}
+section.s{padding:38px 0 10px;scroll-margin-top:120px}
 .sh{display:flex;justify-content:space-between;align-items:end;gap:14px;flex-wrap:wrap;margin-bottom:14px}
 .sh h2{font-family:var(--cond);font-weight:800;font-style:italic;font-size:clamp(30px,4.5vw,42px);text-transform:uppercase;line-height:1;color:var(--azul)}
 .sh p{color:var(--gris);font-size:14.5px}
@@ -181,6 +181,72 @@ footer a{color:#fff;text-decoration:none;font-weight:600}
 .ok{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(.96);width:min(420px,calc(100% - 28px));background:#fff;border-radius:16px;padding:24px;z-index:62;text-align:center;opacity:0;visibility:hidden;transition:.25s;display:grid;gap:10px;justify-items:center}
 .ok.on{opacity:1;visibility:visible;transform:translate(-50%,-50%)}
 .ok .c{width:58px;height:58px;border-radius:50%;background:#e6f6ec;display:grid;place-items:center;font-size:28px}
+
+/* estilo Yaguar */
+.tick{background:var(--nar);color:#fff;overflow:hidden;white-space:nowrap;font-family:var(--cond);font-weight:800;font-size:15px;letter-spacing:.02em;padding:6px 0}
+.tick div{display:inline-block;animation:tick 38s linear infinite;padding-left:100%}
+.tick span{margin-right:26px}
+@keyframes tick{to{transform:translateX(-100%)}}
+header{background:#eef1f6;box-shadow:none;position:sticky;top:0;z-index:30}
+.hrow1{display:flex;justify-content:center;align-items:center;gap:14px;padding:12px 0 8px;flex-wrap:wrap}
+.pill{display:inline-flex;align-items:center;gap:7px;padding:9px 16px;border-radius:999px;font-weight:700;font-size:14.5px;text-decoration:none;white-space:nowrap}
+.pill svg{width:18px;height:18px}
+.pill.wa{background:var(--wa);color:#fff}
+.pill.co{background:var(--azul);color:#fff}
+.pill.lo{background:#3d4656;color:#fff}
+.navp{display:flex;gap:8px;justify-content:center;padding:4px 16px 12px;overflow-x:auto;scrollbar-width:none}
+.navp::-webkit-scrollbar{display:none}
+.navp a{flex:none;background:#fff;border-radius:999px;padding:7px 14px;font-weight:600;font-size:14px;text-decoration:none;color:var(--tinta);white-space:nowrap;box-shadow:0 1px 0 var(--linea)}
+.navp a.on{background:var(--nar);color:#fff}
+@media (max-width:820px){.hrow1{justify-content:space-between;padding:10px 12px 8px;gap:6px;flex-wrap:nowrap}.hrow1 .logo{transform:scale(.88);transform-origin:left center;margin-right:auto}.hrow1 .pill{padding:8px 10px}.hrow1 .pill.lo{display:none}.pill{padding:8px 12px;font-size:13.5px}.pill .t{display:none}.navp{justify-content:flex-start}}
+.hero{margin:16px auto 0;max-width:1148px;border-radius:18px}
+@media (max-width:820px){.hero{margin:12px 12px 0;border-radius:16px}}
+.bens{margin-top:16px}
+.banner{border-radius:18px;overflow:hidden;position:relative;display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:18px;padding:26px 30px;margin-top:18px;min-height:220px}
+@media (max-width:820px){.banner{grid-template-columns:1fr;padding:22px 18px;gap:14px}.gift{background:linear-gradient(180deg,var(--azul) 0 62%,var(--nar) 62%)}}
+.navi{background:radial-gradient(circle at 15% 20%,#fff 0 2px,transparent 3px) 0 0/48px 48px,radial-gradient(circle at 70% 60%,#ffe9c2 0 2px,transparent 3px) 0 0/64px 64px,linear-gradient(120deg,#fff8ec,#ffeccf)}
+.navi h2{font-family:Georgia,serif;font-weight:700;font-size:clamp(34px,5vw,54px);color:#c81d25;line-height:1}
+.navi p{color:#5a3b1f;font-weight:600;margin:8px 0 14px;max-width:40ch}
+.navi .btnr{display:inline-block;background:#c81d25;color:#fff;font-weight:800;padding:10px 18px;border-radius:999px;text-decoration:none;font-size:14.5px}
+.cajas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.caja{display:grid;justify-items:center;gap:6px;text-align:center;min-width:0}
+.caja .bx{width:100%;max-width:96px;aspect-ratio:1/1.05;border-radius:6px;position:relative;box-shadow:0 10px 18px -8px rgba(0,0,0,.35)}
+.caja .bx::before{content:"";position:absolute;left:-4px;right:-4px;top:-8px;height:22%;border-radius:4px;background:inherit;filter:brightness(1.12);box-shadow:0 3px 0 rgba(0,0,0,.12)}
+.caja .bx::after{content:"🎄";position:absolute;inset:30% 0 0;display:grid;place-items:center;font-size:30px}
+.caja .bx i{position:absolute;left:44%;width:12%;top:-8px;bottom:0;background:#e8c35a;z-index:1}
+.caja b{font-family:Georgia,serif;font-size:17px;line-height:1.05;color:#2b1a0e}
+.caja small{font-size:12px;color:#6b5a48}
+.gift{background:linear-gradient(110deg,var(--azul) 0 55%,var(--nar) 55%);color:#fff}
+.gift h2{font-family:var(--cond);font-weight:800;font-style:italic;font-size:clamp(32px,4.6vw,48px);text-transform:uppercase;line-height:.95}
+.gift p{color:#d6e3f7;margin:10px 0 14px;max-width:38ch}
+.gcard{justify-self:center;width:min(320px,90%);aspect-ratio:1.6;border-radius:16px;background:linear-gradient(135deg,var(--nar2),var(--nar) 60%,#d95606);box-shadow:0 22px 40px -14px rgba(0,0,0,.45);transform:rotate(-6deg);padding:18px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.gcard::after{content:"";position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.14)}
+.gcard .g1{font-family:var(--cond);font-weight:800;font-style:italic;font-size:30px;line-height:1}
+.gcard .g2{display:flex;justify-content:space-between;align-items:end;font-weight:700}
+.montos{display:flex;gap:8px;flex-wrap:wrap}
+.montos a{background:#fff;color:var(--azul);font-weight:800;padding:8px 14px;border-radius:999px;text-decoration:none;font-size:14.5px}
+.circs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:30px;text-align:center}
+.circs a{text-decoration:none;display:grid;justify-items:center;gap:8px;font-size:16px;font-weight:600}
+.circs i{font-style:normal;width:min(150px,22vw);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;font-size:clamp(34px,6vw,62px);background:var(--nar);box-shadow:inset 0 -10px 0 rgba(0,0,0,.08)}
+.circs a:nth-child(even) i{background:var(--azul)}
+@media (max-width:820px){.circs{gap:8px}.circs a{font-size:13px}}
+.news{background:#e8ecf3;border-radius:18px;padding:26px 22px;margin-top:30px;text-align:center}
+.news h3{font-size:22px;font-weight:700}
+.news p{color:var(--gris);font-size:14px}
+.news form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:880px;margin:16px auto 0}
+.news input,.news select{font:inherit;border:1.5px solid #9aa3b2;border-radius:999px;padding:11px 16px;background:#fff;width:100%;min-width:0}
+.news button{grid-column:1/-1;background:var(--nar);color:#fff;font-weight:800;padding:13px;border-radius:999px;font-size:16px}
+@media (max-width:820px){.news form{grid-template-columns:1fr}}
+.infob{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:#fff;border-radius:14px;margin-top:30px;box-shadow:0 1px 0 var(--linea),0 10px 24px rgba(19,33,58,.06)}
+.infob>div{display:flex;gap:12px;align-items:center;padding:18px 16px;min-width:0}
+.infob>div+div{border-left:1px solid var(--linea)}
+.infob i{font-style:normal;flex:none;width:50px;height:50px;border-radius:50%;background:var(--nar);display:grid;place-items:center;font-size:22px}
+.infob b{display:block;font-size:15px}
+.infob span{font-size:13px;color:var(--gris);line-height:1.35;display:block}
+@media (max-width:820px){.infob{grid-template-columns:1fr 1fr}.infob>div:nth-child(3){border-left:0}.infob>div:nth-child(n+3){border-top:1px solid var(--linea)}.infob i{width:40px;height:40px;font-size:18px}.infob>div{padding:14px 12px}}
+.mas{display:flex;justify-content:center;padding:14px}
+.mas button{background:var(--azul);color:#fff;font-weight:700;padding:11px 20px;border-radius:999px}
+@media (max-width:820px){.gift{background:linear-gradient(180deg,var(--azul) 0 64%,var(--nar) 64%)}.hero .ctas{flex-wrap:nowrap;gap:8px}.hero .ctas .btn{padding:12px 13px;font-size:14.5px;flex:1}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#intro{display:none}}
 </style>
 </head>
@@ -191,12 +257,16 @@ footer a{color:#fff;text-decoration:none;font-weight:600}
   <div class="cart">🛒</div>
 </div>
 
-<div class="aviso">🚚 Llegamos a <b>más de 800 localidades</b> de Santa Fe, Entre Ríos, Buenos Aires y Córdoba</div>
-<header><div class="wrap bar">
-  <a class="logo" href="#inicio" aria-label="Pronto Ahorro, inicio"><span class="sm">SUPERMERCADO MAYORISTA</span><span class="row"><span class="p">PRONTO</span><span class="d">$</span><span class="a">AHORRO</span></span></a>
-  <nav class="m"><a href="#lista">Lista de precios</a><a href="#comprar">Cómo comprar</a><a href="#donde">Dónde estamos</a></nav>
-  <a class="hwa" href="https://wa.me/5493416114778?text=Hola%20Pronto%20Ahorro!%20Quiero%20hacer%20una%20consulta." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#063b1c"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.5 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.3c.2-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg><span>341 611-4778</span></a>
-</div></header>
+<div class="tick" aria-hidden="true"><div><span>🔥 OFERTAS DE LA SEMANA</span><span>📦 PRECIO ESPECIAL POR BULTO CERRADO</span><span>🎄 CAJAS NAVIDEÑAS PARA EMPRESAS</span><span>🚚 LLEGAMOS A +800 LOCALIDADES</span><span>🎁 VOUCHER NAVIDEÑO</span><span>🔥 OFERTAS DE LA SEMANA</span><span>📦 PRECIO ESPECIAL POR BULTO CERRADO</span><span>🎄 CAJAS NAVIDEÑAS PARA EMPRESAS</span></div></div>
+<header>
+  <div class="hrow1">
+    <a class="logo" href="#inicio" aria-label="Pronto Ahorro, inicio"><span class="sm">SUPERMERCADO MAYORISTA</span><span class="row"><span class="p">PRONTO</span><span class="d">$</span><span class="a">AHORRO</span></span></a>
+    <a class="pill lo" href="#donde">📍 Alvear, Santa Fe</a>
+    <a class="pill wa" href="https://wa.me/5493416114778?text=Hola%20Pronto%20Ahorro!" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.5 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.3c.2-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg><span class="t">WhatsApp oficial</span></a>
+    <a class="pill co" href="app">📱 <span class="t">Acceso comerciantes</span></a>
+  </div>
+  <nav class="navp" aria-label="Secciones"><a href="#inicio" class="on">Inicio</a><a href="#lista">Catálogo y ofertas</a><a href="#navidad">Cajas navideñas</a><a href="#gift">Voucher de regalo</a><a href="#comprar">Cómo comprar</a><a href="#donde">Dónde estamos</a></nav>
+</header>
 
 <section class="hero" id="inicio"><div class="wrap">
   <div>
@@ -215,8 +285,31 @@ footer a{color:#fff;text-decoration:none;font-weight:600}
   <div class="ben"><i>💳</i><div><b>Efectivo o transferencia</b><span>Pagás al retirar o al recibir</span></div></div>
 </div>
 
+
+<div class="wrap">
+  <section class="banner navi" id="navidad" style="scroll-margin-top:120px">
+    <div><h2>Cajas Navideñas</h2><p>Sabemos que cada peso cuenta. Armamos cajas para regalar a tu equipo, tus clientes o tu familia, según tu presupuesto.</p><a class="btnr" href="https://wa.me/5493416114778?text=Hola!%20Quiero%20cotizar%20cajas%20navide%C3%B1as." target="_blank" rel="noopener">¡Solicitá tu cotización!</a></div>
+    <div class="cajas">
+      <div class="caja"><div class="bx" style="background:#e8b923"><i></i></div><b>Caja Dorada</b><small>6 productos</small></div>
+      <div class="caja"><div class="bx" style="background:#1f8a4c"><i></i></div><b>Caja Verde</b><small>10 productos</small></div>
+      <div class="caja"><div class="bx" style="background:#c81d25"><i></i></div><b>Caja Roja</b><small>14 productos</small></div>
+      <div class="caja"><div class="bx" style="background:#0A55B5"><i></i></div><b>Caja Azul</b><small>18 productos</small></div>
+    </div>
+  </section>
+  <section class="banner gift" id="gift" style="scroll-margin-top:120px">
+    <div><h2>Voucher navideño<br>Pronto Ahorro</h2><p>¿No sabés qué regalar? Regalá un voucher para que elijan lo que quieran en el local. Ideal para empresas y para tu equipo.</p>
+      <div class="montos"><a href="https://wa.me/5493416114778?text=Hola!%20Quiero%20un%20voucher%20de%20%2420.000" target="_blank" rel="noopener">$20.000</a><a href="https://wa.me/5493416114778?text=Hola!%20Quiero%20un%20voucher%20de%20%2450.000" target="_blank" rel="noopener">$50.000</a><a href="https://wa.me/5493416114778?text=Hola!%20Quiero%20un%20voucher%20de%20%24100.000" target="_blank" rel="noopener">$100.000</a><a href="https://wa.me/5493416114778?text=Hola!%20Quiero%20un%20voucher%20con%20otro%20monto" target="_blank" rel="noopener">Otro monto</a></div></div>
+    <div class="gcard"><div class="g1">PRONTO<br>AHORRO</div><div class="g2"><span>Voucher de regalo</span><span>🎁</span></div></div>
+  </section>
+  <div class="circs">
+    <a href="app"><i>📦</i>Comerciantes</a>
+    <a href="#gift"><i>🎁</i>Voucher de regalo</a>
+    <a href="#navidad"><i>🎄</i>Cajas navideñas</a>
+    <a href="#lista"><i>🔥</i>Ofertas</a>
+  </div>
+</div>
 <section class="s" id="lista"><div class="wrap">
-  <div class="sh"><div><h2>Lista de precios</h2><p style="margin-top:4px">Sumá por unidad o por bulto. El total se calcula solo.</p></div><span class="upd" id="upd">Lista actualizada</span></div>
+  <div class="sh"><div><h2>Catálogo y ofertas</h2><p style="margin-top:4px">Las ofertas de la semana. Sumá por unidad o por bulto: el total se calcula solo.</p></div><span class="upd" id="upd">Lista actualizada</span></div>
   <div class="tools">
     <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q" type="search" placeholder="Buscar: yerba, aceite, lavandina…" aria-label="Buscar producto"></label>
     <div class="modo" role="group" aria-label="Comprar por"><button class="on" data-m="u">Por unidad</button><button data-m="b">Por bulto</button></div>
@@ -235,24 +328,19 @@ footer a{color:#fff;text-decoration:none;font-weight:600}
   </div>
 </div></section>
 
-<section class="s" id="donde"><div class="wrap donde">
-  <div class="card">
-    <h3>Dónde estamos</h3>
-    <div class="dl">
-      <div><i>📍</i><span>Ruta Provincial 21, km 5,8, colectora<br>Cochabamba 2709, Alvear, Santa Fe<br><small style="color:var(--gris)">A dos cuadras del acceso a Alvear</small></span></div>
-      <div><i>🕗</i><span>Lunes a viernes de 8 a 16 hs<br>Sábados de 8 a 13 hs</span></div>
-      <div><i>💬</i><span>Consultas y pedidos: <a href="https://wa.me/5493416114778" target="_blank" rel="noopener"><b>341 611-4778</b></a></span></div>
-    </div>
-    <div class="ctas" style="margin-top:16px"><a class="btn az" href="https://maps.google.com/?q=Pronto+Ahorro+Mayorista+Alvear+Santa+Fe" target="_blank" rel="noopener">Cómo llegar</a></div>
+<div class="wrap" id="donde" style="scroll-margin-top:120px">
+  <div class="infob">
+    <div><i>📍</i><div><span>Te esperamos en</span><b>Alvear, Santa Fe</b></div></div>
+    <div><i>🏬</i><div><b>Dirección</b><span>Ruta 21 km 5,8, colectora · Cochabamba 2709</span></div></div>
+    <div><i>📞</i><div><b>Pedidos</b><span><a href="https://wa.me/5493416114778" target="_blank" rel="noopener">341 611-4778</a></span></div></div>
+    <div><i>🕗</i><div><b>Horarios</b><span>Lun a vie 8 a 16 · sáb 8 a 13</span></div></div>
   </div>
-  <div class="card">
-    <h3>Repartimos a +800 localidades</h3>
-    <p style="margin-top:10px;color:var(--gris)">Llevamos tu pedido a comercios de cuatro provincias. Escribinos tu localidad y te decimos qué día pasa el reparto.</p>
-    <div class="prov"><span>Santa Fe</span><span>Entre Ríos</span><span>Buenos Aires</span><span>Córdoba</span></div>
-    <div class="ctas" style="margin-top:16px"><a class="btn wa" href="https://wa.me/5493416114778?text=Hola!%20%C2%BFQu%C3%A9%20d%C3%ADa%20llega%20el%20reparto%20a%20mi%20localidad%3F" target="_blank" rel="noopener">Consultar mi localidad</a></div>
+  <div class="news">
+    <h3>📣 ¡No te pierdas nuestras ofertas!</h3><p>Sumate a la lista de WhatsApp y recibí antes que nadie las promos de la semana.</p>
+    <form id="nl"><input name="nom" placeholder="Nombre*" required><input name="loc" placeholder="Localidad*" required><select name="tipo"><option>Soy comerciante</option><option>Compro para mi casa</option><option>Empresa (cajas navideñas)</option></select><button type="submit">Sumarme a la lista</button></form>
   </div>
-</div></section>
-
+  <div class="ctas" style="justify-content:center;margin-top:18px"><a class="btn az" href="https://maps.google.com/?q=Pronto+Ahorro+Mayorista+Alvear+Santa+Fe" target="_blank" rel="noopener">Cómo llegar</a><a class="btn wa" href="https://wa.me/5493416114778?text=Hola!%20%C2%BFQu%C3%A9%20d%C3%ADa%20llega%20el%20reparto%20a%20mi%20localidad%3F" target="_blank" rel="noopener">¿Qué día llega el reparto a mi localidad?</a></div>
+</div>
 <footer><div class="wrap">
   <div><b style="color:#fff">Pronto Ahorro · Supermercado mayorista</b><br>Alimentos, bebidas, perfumería y limpieza. Precios de esta demo a modo de ejemplo.</div>
   <div class="soc">
@@ -308,7 +396,7 @@ if(seen)intro.remove();else setTimeout(function(){intro.classList.add('out');try
 
 var d=new Date();$('#upd').textContent='Lista actualizada el '+d.getDate()+'/'+(d.getMonth()+1);
 
-var cat='todo',q='',modo='u',cart=st('pa-pedido')||{};
+var full=false,cat='todo',q='',modo='u',cart=st('pa-pedido')||{};
 function chips(){$('#chips').innerHTML=CATS.map(function(c){return '<button class="chip'+(c[0]===cat?' on':'')+'" data-c="'+c[0]+'">'+c[1]+'</button>'}).join('')}
 function key(p){return p.id+'|'+modo}
 function row(p){var k=key(p),n=cart[k]||0;
@@ -318,8 +406,11 @@ function row(p){var k=key(p),n=cart[k]||0;
  '<div class="step">'+(n?'<div class="qty"><button data-q="'+p.id+'" data-d="-1" aria-label="Quitar">−</button><span>'+n+'</span><button data-q="'+p.id+'" data-d="1" aria-label="Sumar">+</button></div>':'<button class="add" data-q="'+p.id+'" data-d="1">'+(modo==='u'?'+ Sumar':'+ Bulto')+'</button>')+'</div></div>'}
 function lista(){var t=q.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
  var L=P.filter(function(p){return (cat==='todo'||p.c===cat)&&(!t||(p.n+' '+p.pr).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').indexOf(t)>-1)});
- $('#lista-p').innerHTML='<div class="fila hd"><span></span><span>Producto</span><span class="pr">'+(modo==='u'?'Por unidad':'Por bulto')+'</span><span class="pr">'+(modo==='u'?'Por bulto':'Por unidad')+'</span><span></span></div>'+(L.map(row).join('')||'<div class="vacio">No encontramos ese producto. Escribinos por WhatsApp y te decimos si lo tenemos.</div>')}
+ var tot=L.length;if(cat==='todo'&&!t&&!full)L=L.filter(function(p){return ['yer','ace','fid','gas','lav','pap','alf','cer'].indexOf(p.id)>-1});
+ $('#lista-p').innerHTML='<div class="fila hd"><span></span><span>Producto</span><span class="pr">'+(modo==='u'?'Por unidad':'Por bulto')+'</span><span class="pr">'+(modo==='u'?'Por bulto':'Por unidad')+'</span><span></span></div>'+(L.map(row).join('')+(cat==='todo'&&!t&&!full?'<div class="mas"><button id="vermas">Ver los '+tot+' productos</button></div>':'')||'<div class="vacio">No encontramos ese producto. Escribinos por WhatsApp y te decimos si lo tenemos.</div>')}
 chips();lista();
+document.addEventListener('click',function(e){if(e.target.id==='vermas'){full=true;lista()}});
+var nl=document.getElementById('nl');nl.addEventListener('submit',function(e){e.preventDefault();var f=new FormData(nl);window.open('https://wa.me/'+WA+'?text='+encodeURIComponent('Hola Pronto Ahorro! Quiero sumarme a la lista de ofertas 📣\nNombre: '+f.get('nom')+'\nLocalidad: '+f.get('loc')+'\n'+f.get('tipo')),'_blank','noopener')});
 $('#chips').addEventListener('click',function(e){var b=e.target.closest('[data-c]');if(!b)return;cat=b.dataset.c;chips();lista()});
 $('#q').addEventListener('input',function(e){q=e.target.value;lista()});
 document.querySelector('.modo').addEventListener('click',function(e){var b=e.target.closest('[data-m]');if(!b)return;modo=b.dataset.m;document.querySelectorAll('.modo button').forEach(function(x){x.classList.toggle('on',x===b)});lista()});
