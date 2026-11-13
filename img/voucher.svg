@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420">
+  <defs>
+    <linearGradient id="nv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d3a8f"/><stop offset="1" stop-color="#0f2466"/></linearGradient>
+    <linearGradient id="rb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff3b3b"/><stop offset="1" stop-color="#c8121b"/></linearGradient>
+    <g id="st"><path d="M0-14 3-3 14 0 3 3 0 14-3 3-14 0-3-3Z" fill="#f2b65a"/></g>
+    <g id="tr"><path d="M0-34 16-8H8L20 12H6L22 30H-22L-6 12H-20L-8-8H-16Z" fill="none" stroke="#f2b65a" stroke-width="2.5" stroke-linejoin="round"/><path d="M0 30V40" stroke="#f2b65a" stroke-width="2.5"/></g>
+  </defs>
+  <rect x="30" y="34" width="580" height="356" rx="22" fill="#c8121b"/>
+  <rect x="20" y="20" width="580" height="356" rx="22" fill="url(#nv)"/>
+  <rect x="36" y="36" width="548" height="324" rx="14" fill="none" stroke="#f2b65a" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/>
+  <use href="#st" x="110" y="90"/><use href="#st" x="200" y="70" transform="scale(1)"/><use href="#st" x="545" y="300"/><use href="#st" x="90" y="230"/><use href="#st" x="530" y="140"/>
+  <circle cx="160" cy="120" r="3" fill="#fff" opacity=".7"/><circle cx="430" cy="90" r="2.5" fill="#fff" opacity=".7"/><circle cx="560" cy="210" r="2.5" fill="#fff" opacity=".7"/><circle cx="70" cy="160" r="2" fill="#fff" opacity=".7"/>
+  <text x="310" y="200" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="60" fill="#fff" letter-spacing="2">VOUCHER</text>
+  <text x="310" y="268" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="60" fill="#F36B12" letter-spacing="2">NAVIDEÑO</text>
+  <text x="310" y="312" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="26" fill="#fff">Vos regalás, ellos eligen</text>
+  <use href="#tr" x="120" y="320"/><use href="#tr" x="170" y="335" transform="translate(0 0)"/><use href="#tr" x="500" y="322"/>
+  <path d="M440 20h70l90 90v70Z" fill="url(#rb)"/>
+  <path d="M20 270v70l36 36h70Z" fill="url(#rb)" opacity=".95"/>
+  <g transform="translate(540 64) rotate(40)">
+    <path d="M0 0c-30-34-70-30-60-4 6 16 40 12 60 4Z" fill="#e01a24"/>
+    <path d="M0 0c30-34 70-30 60-4-6 16-40 12-60 4Z" fill="#e01a24"/>
+    <path d="M-4 4l-26 52 14-4 6 14 10-58ZM4 4l26 52-14-4-6 14-10-58Z" fill="#c8121b"/>
+    <circle r="11" fill="#ff4040"/>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 340">
+  <defs><linearGradient id="k" x1="0" x2="1"><stop offset="0" stop-color="#d9b98c"/><stop offset="1" stop-color="#c9a473"/></linearGradient>
+  <linearGradient id="s" x1="0" x2="1"><stop offset="0" stop-color="#b58f60"/><stop offset="1" stop-color="#a27b4e"/></linearGradient></defs>
+  <path d="M40 60 70 30h220l-30 30Z" fill="#e6caa0"/>
+  <path d="M260 60l30-30v270l-30 30Z" fill="url(#s)"/>
+  <rect x="10" y="60" width="250" height="270" rx="6" fill="url(#k)"/>
+  <rect x="26" y="76" width="218" height="238" rx="18" fill="#1f2f63"/>
+  <g stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".9">
+    <g transform="translate(80 110)"><path d="M0-16V-6M0 6V16M-16 0H-6M6 0H16M-11-11-5-5M5 5 11 11M-11 11-5 5M5-5 11-11"/></g>
+    <g transform="translate(150 98)"><path d="M0-12V-5M0 5V12M-12 0H-5M5 0H12M-8-8-4-4M4 4 8 8M-8 8-4 4M4-4 8-8"/></g>
+    <g transform="translate(205 120)"><path d="M0-15V-6M0 6V15M-15 0H-6M6 0H15M-10-10-5-5M5 5 10 10M-10 10-5 5M5-5 10-10"/></g>
+  </g>
+  <path d="M26 230V205h22v-14h18v14h16v-10l12-8 12 8v10h14v-30l12-30 12 30v30h14v-12h20v12h16v-16h18v16h14v25Z" fill="#d9b98c"/>
+  <rect x="58" y="212" width="8" height="10" fill="#c8121b"/><rect x="132" y="200" width="6" height="12" fill="#c8121b"/><rect x="190" y="210" width="8" height="10" fill="#c8121b"/>
+  <g fill="#d9b98c" transform="translate(70 168) scale(.9)"><path d="M0 10h44l6-10h-8l-4 6H4Z"/><circle cx="56" cy="2" r="3"/><path d="M62 4l10-6 8 4-8 2-4 6Z"/><path d="M86 2l10-6 8 4-8 2-4 6Z"/><path d="M110 0l10-6 8 4-8 2-4 6Z"/></g>
+  <rect x="26" y="230" width="218" height="84" rx="0" fill="#d9b98c"/>
+  <text x="135" y="282" text-anchor="middle" font-family="'Brush Script MT','Segoe Script',cursive" font-size="30" fill="#c8121b" font-style="italic">Felices Fiestas</text>
+</svg>

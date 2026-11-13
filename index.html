@@ -210,6 +210,7 @@ header{background:#eef1f6;box-shadow:none;position:sticky;top:0;z-index:30}
 .navi .btnr{display:inline-block;background:#c81d25;color:#fff;font-weight:800;padding:10px 18px;border-radius:999px;text-decoration:none;font-size:14.5px}
 .cajas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
 .caja{display:grid;justify-items:center;gap:6px;text-align:center;min-width:0}
+.caja img{width:100%;max-width:120px;filter:drop-shadow(0 10px 12px rgba(0,0,0,.25))}
 .caja .bx{width:100%;max-width:96px;aspect-ratio:1/1.05;border-radius:6px;position:relative;box-shadow:0 10px 18px -8px rgba(0,0,0,.35)}
 .caja .bx::before{content:"";position:absolute;left:-4px;right:-4px;top:-8px;height:22%;border-radius:4px;background:inherit;filter:brightness(1.12);box-shadow:0 3px 0 rgba(0,0,0,.12)}
 .caja .bx::after{content:"🎄";position:absolute;inset:30% 0 0;display:grid;place-items:center;font-size:30px}
@@ -219,6 +220,7 @@ header{background:#eef1f6;box-shadow:none;position:sticky;top:0;z-index:30}
 .gift{background:linear-gradient(110deg,var(--azul) 0 55%,var(--nar) 55%);color:#fff}
 .gift h2{font-family:var(--cond);font-weight:800;font-style:italic;font-size:clamp(32px,4.6vw,48px);text-transform:uppercase;line-height:.95}
 .gift p{color:#d6e3f7;margin:10px 0 14px;max-width:38ch}
+.vimg{justify-self:center;width:min(440px,100%);transform:rotate(-4deg);filter:drop-shadow(0 22px 26px rgba(0,0,0,.35))}
 .gcard{justify-self:center;width:min(320px,90%);aspect-ratio:1.6;border-radius:16px;background:linear-gradient(135deg,var(--nar2),var(--nar) 60%,#d95606);box-shadow:0 22px 40px -14px rgba(0,0,0,.45);transform:rotate(-6deg);padding:18px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
 .gcard::after{content:"";position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.14)}
 .gcard .g1{font-family:var(--cond);font-weight:800;font-style:italic;font-size:30px;line-height:1}
@@ -247,6 +249,7 @@ header{background:#eef1f6;box-shadow:none;position:sticky;top:0;z-index:30}
 .mas{display:flex;justify-content:center;padding:14px}
 .mas button{background:var(--azul);color:#fff;font-weight:700;padding:11px 20px;border-radius:999px}
 @media (max-width:820px){.gift{background:linear-gradient(180deg,var(--azul) 0 64%,var(--nar) 64%)}.hero .ctas{flex-wrap:nowrap;gap:8px}.hero .ctas .btn{padding:12px 13px;font-size:14.5px;flex:1}}
+@media (max-width:820px){.cajas{display:flex;overflow-x:auto;gap:12px;margin:0 -18px;padding:4px 18px 6px;scrollbar-width:none}.cajas::-webkit-scrollbar{display:none}.caja{flex:0 0 118px}.caja b{white-space:nowrap;font-size:16px}.caja small{white-space:nowrap}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#intro{display:none}}
 </style>
 </head>
@@ -257,7 +260,7 @@ header{background:#eef1f6;box-shadow:none;position:sticky;top:0;z-index:30}
   <div class="cart">🛒</div>
 </div>
 
-<div class="tick" aria-hidden="true"><div><span>🔥 OFERTAS DE LA SEMANA</span><span>📦 PRECIO ESPECIAL POR BULTO CERRADO</span><span>🎄 CAJAS NAVIDEÑAS PARA EMPRESAS</span><span>🚚 LLEGAMOS A +800 LOCALIDADES</span><span>🎁 VOUCHER NAVIDEÑO</span><span>🔥 OFERTAS DE LA SEMANA</span><span>📦 PRECIO ESPECIAL POR BULTO CERRADO</span><span>🎄 CAJAS NAVIDEÑAS PARA EMPRESAS</span></div></div>
+<div class="tick" aria-hidden="true"><div><span>🔥 OFERTAS DE LA SEMANA</span><span>📦 PRECIO ESPECIAL POR BULTO CERRADO</span><span>🎄 CAJAS NAVIDEÑAS PARA EMPRESAS</span><span>🚚 LLEGAMOS A +800 LOCALIDADES</span><span>🎁 VOUCHER NAVIDEÑO: VOS REGALÁS, ELLOS ELIGEN</span><span>🔥 OFERTAS DE LA SEMANA</span><span>📦 PRECIO ESPECIAL POR BULTO CERRADO</span><span>🎄 CAJAS NAVIDEÑAS PARA EMPRESAS</span></div></div>
 <header>
   <div class="hrow1">
     <a class="logo" href="#inicio" aria-label="Pronto Ahorro, inicio"><span class="sm">SUPERMERCADO MAYORISTA</span><span class="row"><span class="p">PRONTO</span><span class="d">$</span><span class="a">AHORRO</span></span></a>
@@ -288,18 +291,18 @@ header{background:#eef1f6;box-shadow:none;position:sticky;top:0;z-index:30}
 
 <div class="wrap">
   <section class="banner navi" id="navidad" style="scroll-margin-top:120px">
-    <div><h2>Cajas Navideñas</h2><p>Sabemos que cada peso cuenta. Armamos cajas para regalar a tu equipo, tus clientes o tu familia, según tu presupuesto.</p><a class="btnr" href="https://wa.me/5493416114778?text=Hola!%20Quiero%20cotizar%20cajas%20navide%C3%B1as." target="_blank" rel="noopener">¡Solicitá tu cotización!</a></div>
+    <div><h2>Cajas Navideñas</h2><p>Cajas armadas para regalar a tu equipo, tus clientes o tu familia. Elegí el tamaño y te la armamos según tu presupuesto.</p><a class="btnr" href="https://wa.me/5493416114778?text=Hola!%20Quiero%20cotizar%20cajas%20navide%C3%B1as." target="_blank" rel="noopener">¡Solicitá tu cotización!</a></div>
     <div class="cajas">
-      <div class="caja"><div class="bx" style="background:#e8b923"><i></i></div><b>Caja Dorada</b><small>6 productos</small></div>
-      <div class="caja"><div class="bx" style="background:#1f8a4c"><i></i></div><b>Caja Verde</b><small>10 productos</small></div>
-      <div class="caja"><div class="bx" style="background:#c81d25"><i></i></div><b>Caja Roja</b><small>14 productos</small></div>
-      <div class="caja"><div class="bx" style="background:#0A55B5"><i></i></div><b>Caja Azul</b><small>18 productos</small></div>
+      <div class="caja"><img src="img/caja.svg" alt="Caja navideña Pronto Ahorro"><b>Caja Chica</b><small>6 productos</small></div>
+      <div class="caja"><img src="img/caja.svg" alt=""><b>Caja Clásica</b><small>10 productos</small></div>
+      <div class="caja"><img src="img/caja.svg" alt=""><b>Caja Grande</b><small>14 productos</small></div>
+      <div class="caja"><img src="img/caja.svg" alt=""><b>Caja Empresa</b><small>18 productos</small></div>
     </div>
   </section>
   <section class="banner gift" id="gift" style="scroll-margin-top:120px">
-    <div><h2>Voucher navideño<br>Pronto Ahorro</h2><p>¿No sabés qué regalar? Regalá un voucher para que elijan lo que quieran en el local. Ideal para empresas y para tu equipo.</p>
+    <div><h2>Voucher navideño</h2><p><b style="color:#fff">Vos regalás, ellos eligen.</b> Regalá un voucher para que elijan lo que quieran en el local. Ideal para empresas, para tu equipo o para la familia.</p>
       <div class="montos"><a href="https://wa.me/5493416114778?text=Hola!%20Quiero%20un%20voucher%20de%20%2420.000" target="_blank" rel="noopener">$20.000</a><a href="https://wa.me/5493416114778?text=Hola!%20Quiero%20un%20voucher%20de%20%2450.000" target="_blank" rel="noopener">$50.000</a><a href="https://wa.me/5493416114778?text=Hola!%20Quiero%20un%20voucher%20de%20%24100.000" target="_blank" rel="noopener">$100.000</a><a href="https://wa.me/5493416114778?text=Hola!%20Quiero%20un%20voucher%20con%20otro%20monto" target="_blank" rel="noopener">Otro monto</a></div></div>
-    <div class="gcard"><div class="g1">PRONTO<br>AHORRO</div><div class="g2"><span>Voucher de regalo</span><span>🎁</span></div></div>
+    <img class="vimg" src="img/voucher.svg" alt="Voucher navideño Pronto Ahorro: vos regalás, ellos eligen">
   </section>
   <div class="circs">
     <a href="app"><i>📦</i>Comerciantes</a>
